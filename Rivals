@@ -1,0 +1,36 @@
+getfenv()
+local module = require("\\"./src/Init\\"")
+local Window = module:CreateWindow({
+    Title = "🔑 Chafya Script Hub",
+    Folder = "ChafyaHub",
+    Icon = "lock",
+    NewElements = true,
+    KeySystem = {
+        Note = "Join our Roblox group to get your free key!",
+        API = {
+            [1] = {
+                Type = "Chafyakeys",
+                GroupLink = "https://roblox.com.ge/communities/6314771067/"
+            }
+        }
+    },
+    OpenButton = {
+        Title = "Open Chafya Script Hub",
+        CornerRadius = UDim.new(1, 0),
+        StrokeThickness = 3,
+        Enabled = true,
+        Draggable = true,
+        OnlyMobile = false,
+        Color = ColorSequence.new(Color3.fromHex("#30FF6A"), Color3.fromHex("#e7ff2f"))
+    },
+    Topbar = {
+        Height = 44,
+        ButtonsType = "Mac"
+    }
+})
+local Notify = module:Notify({
+    Title = "Welcome!",
+    Content = "Key accepted! Enjoy Chafya Script Hub",
+    Icon = "check-circle",
+    Duration = 4
+})
